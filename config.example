@@ -1,0 +1,10 @@
+performStemming = Y
+removeStopWords = Y
+stopFilePath = smart_common_words.txt
+divergence = Y
+frequencyFeatures = Y
+cosineOverlap = Y
+topicWordFeatures = Y
+backgroundCorpusFreqCounts = bgFreqCounts.unstemmed.txt
+backgroundIdfUnstemmed = bgIdfValues.unstemmed.txt
+backgroundIdfStemmed = bgIdfValues.stemmed.txt
