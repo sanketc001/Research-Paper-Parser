@@ -510,15 +510,15 @@ for cl in mylist:
         txtFileObj.writelines(temp)
     pdfFileObj.close()
     txtFileObj.close()
-textfile = open('output/1.pdf.txt', 'r',encoding='utf8')
-filetext = textfile.read()
-textfile.close()
-x = re.search("1 I NTRODUCTION", filetext)
-if(x!=None):
-    print("The first white-space character is located in position:", x.start())
-y= re.search("2 L ITERATURE REVIEW", filetext)
-if(y!=None):
-    print(filetext[x.start():y.start()])
+for i in os.listdir(directory):
+    print(f'{directory}/{i}')
+    textfile = open(f'{directory}/{i}', 'r', encoding='utf8')
+    filetext = textfile.read()
+    x = re.search("\n1 I", filetext)
+    y= re.search("\n2 ", filetext)
+    if(y!=None):
+        print(filetext[x.start():y.start()])
+    textfile.close()
     # ieval = InputBasedEvaluation()
     # opt = ieval.readAndStoreConfigOptions()
     # featuresToCompute = []
